@@ -1,0 +1,94 @@
+<div class="container col-md-12 p-0 m-0">
+  <img src="../../assets/img/channelbackground.png" alt="" class=" p-0 m-0 imgg">
+  <div class="content text-center ">
+    <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/img/pickbids logo.png" class="navimg" alt="">
+      </a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" style="color: white;font-size: 1.2rem;margin-right: 3pc;">
+          <span><i class="fa fa-user-o fa-1" aria-hidden="true"></i></span>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div id="logbox">
+        <form id="signup" [formGroup]="signupForm1" (ngSubmit)="submit()">
+          <a routerLink="/merchants/signup">
+            <i class="fa fa-times" aria-hidden="true" style="margin-left: 701px;font-size: 1.5rem;"></i>
+          </a>
+          <h1 class="headh1" style="border-bottom: 2px solid red;width: 13%;margin-top: -38px;">Sign up</h1>
+          <div class="form-group">
+            <input name="storenumber" formControlName="storenumber" type="tel" placeholder="Store Number"
+              autofocus="autofocus" class="input pass" style="margin-top: 32px;" />
+            <div *ngIf="f.storenumber.touched && f.storenumber.invalid" class="alert alert-danger">
+              <div *ngIf="f.storenumber.errors.required">Store Number is required.</div>
+              <div *ngIf="f.storenumber.errors.pattern">Store Number Should be written in Number</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="BuildingName" formControlName="BuildingName" type="text" placeholder="Building Name"
+              autofocus="autofocus" class="input pass input1" />
+            <div *ngIf="f.BuildingName.touched && f.BuildingName.invalid" class="alert alert-danger">
+              <div *ngIf="f.BuildingName.errors.required">Building Name is required.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="Address1" formControlName="Address1" type="text" placeholder="Address 1"
+              class="input pass input1" />
+            <div *ngIf="f.Address1.touched && f.Address1.invalid" class="alert alert-danger">
+              <div *ngIf="f.Address1.errors.required">Address 1 is required.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="Address2" formControlName="Address2" type="text" placeholder="Address 2"
+              class="input pass input1" />
+            <div *ngIf="f.Address2.touched && f.Address2.invalid" class="alert alert-danger">
+              <div *ngIf="f.Address2.errors.required">Address 2 is required.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="Landmark" formControlName="Landmark" type="text" placeholder="Landmark"
+              class="input pass input1" />
+            <div *ngIf="f.Landmark.touched && f.Landmark.invalid" class="alert alert-danger">
+              <div *ngIf="f.Landmark.errors.required">Landmark is required.</div>
+              <div *ngIf="f.Landmark.errors.minlength">Landmark Should be Minimum 4 Character</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="city" formControlName="city" type="text" placeholder="City" class="input pass input1" />
+            <div *ngIf="f.city.touched && f.city.invalid" class="alert alert-danger">
+              <div *ngIf="f.city.errors.required">city Name is required.</div>
+              <div *ngIf="f.city.errors.pattern">city Name Should be written in Character</div>
+              <div *ngIf="f.city.errors.minlength">city Should be Minimum 4 Character</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="Zipcode" type="text" formControlName="Zipcode" placeholder="Zipcode"
+              class="input pass input1" />
+            <div *ngIf="f.Zipcode.touched && f.Zipcode.invalid" class="alert alert-danger">
+              <div *ngIf="f.Zipcode.errors.required">GST Number is required.</div>
+              <div *ngIf="f.Zipcode.errors.pattern">Please, Enter 6 digit Zipcode.<br>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label style="margin-left: -20%;">
+                <input type="checkbox" name="check1" formControlName="check1">
+                I agree to the Lorem ipsum dolor sit, amet consectetur adipisicing
+              </label>
+              <div *ngIf="f.check1.touched && f.check1.invalid" class="alert alert-danger">
+                <div *ngIf="f.check1.errors.required">Please Tick The CheckBox For Proceed To Next Page</div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn rounded-pill bg-white text-dark" style="width: 20%;height: 39px;"
+            (click)="back()">Back</button>
+          <button type="submit" class="btn  rounded-pill bg-white text-dark " style="width: 20%;height: 39px;"
+            [disabled]="!signupForm1.valid" (click)="next1()">Next</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

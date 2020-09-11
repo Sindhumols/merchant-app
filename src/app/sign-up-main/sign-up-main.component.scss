@@ -1,0 +1,197 @@
+
+.navbar{
+    background: transparent !important;
+    box-shadow: none;
+    }
+    .navimg{
+    height:50px !important;
+    }
+.container {
+    position: relative;
+    }
+    .container img {
+    vertical-align: middle;
+    }
+    .container .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(42, 110, 131, 0.877);
+    color: #f1f1f1;
+    font-weight: bolder;
+    }
+    .input1{
+    background-color: whitesmoke;
+    }
+    .imgposition{
+    position: absolute;
+    width: 127%;
+    margin-left: -15%;
+    }
+    .container {
+    display: -webkit-flex;
+    display: flex;
+    height: 100%;
+    position: relative;
+    } 
+    #logbox {
+    padding: 10px;
+    margin: 89px auto;
+    width: 790px;
+    background:  linear-gradient(90deg, #114245,rgb(22, 134, 145), rgb(45, 158, 178),rgb(13, 75, 86));
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+    }
+    .headh1 {
+    text-align: center;
+    font-size: 175%;
+    font-weight: 300;
+    }
+    .headh1, input {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    }
+    .input {
+    width: 75%;
+    height: 50px;
+    display: block;
+    margin: 0 auto 15px;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid #ebebeb;
+    }
+    .input:focus {
+    outline: none;
+    border-bottom-color: #3CC !important;
+    }
+    .input:hover {
+    border-bottom-color: #dcdcdc;
+    }
+    .input:invalid {
+    box-shadow: none;
+    }
+    .navimg{
+    vertical-align: middle;
+    border-style: none;
+    width: 139px;
+    height: 10%;
+    }
+    .fa{
+    font-size: 1.5em;
+    color: white;
+    }
+    .alert-danger{
+    width: 75%;
+    margin-left: 12%;
+    }
+    .imgg{
+    width: 1508px;
+    height: 1507px;
+    }
+    .content{
+    width: 1508px;
+    height:1507px;
+    }
+    /*-----------laptop/Desktop-----------------------*/
+    @media(min-width:1025px){
+    .imgg{
+    width: 1508px;
+    height:1507px;
+    }
+    .content{
+    width: 1508px;
+    height:1507px;
+    }
+    }
+    @media(max-width:1024px){
+    .imgg{
+    width: 1024px;
+    height:1528px;
+    }
+    .content{
+    width: 1024px;
+    height:1528px;
+    }
+    }
+    /*-------------tablet/Ipad----------------------*/
+    @media(min-width:769px) and (max-width:1023px){
+    .imgg{
+    width: 1024px;
+    height: 1528px;
+    }
+    .content{
+    width: 1024px;
+    height:1528px;
+    }
+    }
+    /*--------------mobile----------------------*/
+    @media(max-width:768px){
+    .imgg{
+    width: 815px;
+    height:1528px;
+    }
+    .content{
+    width: 815px;
+    height: 1528px;
+    }
+    }
+    @media(max-width:468px){
+    .imgg{
+    width: 815px;
+    height: 1523px;
+    }
+    .content{
+    width: 815px;
+    height: 1523px;
+    }
+    }
+    @media(max-width:425px){
+    .imgg{
+    width: 815px;
+    height: 1523px;
+    }
+    .content{
+    width: 815px;
+    height: 1523px;
+    }
+    }
+    @media(max-width:411px){
+    .imgg{
+    width: 815px;
+    height: 1523px;
+    }
+    .content{
+    width: 815px;
+    height: 1523px;
+    }
+    }
+    @media(max-width:360px){
+    .imgg{
+    width: 815px;
+    height: 1523px;
+    }
+    .content{
+    width: 815px;
+    height: 1523px;
+    }
+    }
+    
+    @media(max-width:375px){
+    .imgg{
+    width: 815px;
+    height: 1523px;
+    }
+    .content{
+    width: 815px;
+    height: 1523px;
+    }
+    }
+    @media(max-width:320px){
+    .imgg{
+    width: 815px;
+    height: 1622px;
+    }
+    .content{
+    width: 815px;
+    height: 1622px;
+    }
+    }

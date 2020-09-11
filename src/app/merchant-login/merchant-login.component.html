@@ -1,0 +1,179 @@
+<div class="col-md-12 p-0 m-0">
+  <div class="container col-md-12 p-0 m-0">
+    <img class="bgimg" src="../../assets/img/bgimg.png" class="w-100 p-0 m-0 " style="height: fit-content;">
+    <div class="content text-center mt-2  w-100 content1">
+      <div class="main-content">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#"><img src="../../assets/img/pickbids_logo.png" class="navimg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+              aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click)="alert()">
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item p-2 " routerLinkActive="active">
+                  <mat-icon style="font-size: 30px ; color: white;">person_outline</mat-icon>
+                </li>
+                <li class="nav-item" style="color: white; ">
+                  <a class="nav-link profile">Login</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content text-white"
+                style=" background: linear-gradient(90deg, #114245,rgb(22, 134, 145), rgb(45, 158, 178),rgb(13, 75, 86));">
+                <button type="button" class="btn text-white" data-dismiss="modal" (click)="hide()"
+                  style="margin-left: 80%;background-color: transparent;">
+                  <a routerLink='/landingpage'>
+                    <mat-icon style="color: white;">clear</mat-icon>
+                  </a>
+                </button>
+                <div class="modal-body ">
+                  <mat-tab-group class="text-white m-0 p-0" *ngIf="login1">
+                    <mat-tab style="color: white;" label="Login" id="login">
+                      <div class="row " style="color: white; margin-top: 30PX;">
+                        <div class="container">
+                          <form #f="ngForm" (ngSubmit)="login(f)">
+                            <mat-card class="logsign">
+                              <div class="form-group text-white">
+                                <input required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" ngModel name="email"
+                                  id="email" #email="ngModel" type="email" class="form-control inputsize"
+                                  placeholder="Enter Email" />
+                                <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                                  <div *ngIf="email.errors.required"> Email is required.</div>
+                                  <div *ngIf="email.errors.pattern">Invalid Email.</div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <mat-icon matSuffix (click)="hide3 = !hide3" style='cursor: pointer;' class="pwicon">
+                                  {{hide3 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                <input required minlength="6" maxlength="15" ngModel name="password" id="password"
+                                  #password="ngModel" pattern="^[a-zA-Z0-9]{6,15}$" [type]="hide3 ? 'password' : 'text'"
+                                  class="form-control inputsize" placeholder="Enter password" />
+                                <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                                  <div *ngIf="password.errors.required"> Password is required.</div>
+                                  <div *ngIf="password.errors.minlength">Password must contain 6 characters</div>
+                                  <div *ngIf="password.errors.maxlength">Password should not exceeds 15 charcaters</div>
+                                  <div *ngIf="password.errors.pattern">Invalid password</div>
+                                </div>
+                              </div>
+                            </mat-card>
+                            <div class="text-center text-white" style="margin-top: 12PX;">
+                              <button class="form-control text-dark border border-white" mat-fab [disabled]="!f.valid"
+                                (click)="clicklogin()">
+                                <mat-icon><strong>arrow_right_alt</strong> </mat-icon>
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row" *ngIf='mainlogin'>
+                        <div class="col-lg-12 col-md-12 text-center">
+                          <p class="text-white" (click)='forgotpage()' style="cursor: pointer;"> Forgot Password</p>
+                          <p class="text-light">Need an account ? <a routerLink="/merchants/signup"
+                              style="color: white;">
+                              <strong> Sign Up Now .</strong>
+                            </a> </p>
+                        </div>
+                      </div>
+                    </mat-tab>
+                  </mat-tab-group>
+                  <div class="row" *ngIf='forgetpassword'>
+                    <div class="container">
+                      <h3>Please Enter The Mobile Number </h3>
+                      <form #f1="ngForm" (ngSubmit)="forgetSubmit(g)">
+                        <mat-card class="logsign">
+                          <div class="form-group text-white">
+                            <input required ngModel name="tel" id="tel" #tel="ngModel"
+                              pattern="^((\\+91-?)|0)?[0-9]{10}$" (change)="log(tel)" type="tel"
+                              class="form-control inputsize" placeholder="Enter Mobile Number" />
+                            <div class="alert alert-danger" *ngIf="tel.touched && !tel.valid">
+                              <div *ngIf="tel.errors.required"> Mobile Number is required.</div>
+                              <div *ngIf="tel.errors.pattern">Mobile Number should be 10 Digit Number</div>
+                            </div>
+                          </div>
+                        </mat-card>
+                        <div class="text-center" style="margin-top: 12PX;">
+                          <button class="form-control text-dark border border-white" mat-fab [disabled]="!f1.valid"
+                            (click)="mainlogin2()">
+                            <mat-icon><strong>arrow_right_alt</strong> </mat-icon>
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="row" *ngIf='gotp'>
+                    <div class="col-md-12 p-0  h-100" style="margin: 0px auto;">
+                      <div class=" container col-md-12 p-0  con">
+                        <div class="main-content mt-4 p-3 ">
+                          <div class="col-md-6 m-auto text-left rounded shadow bg-white">
+                            <p class="enterotp mt-2"><strong> Enter OTP</strong></p>
+                            <div class="otp mt-4 ">
+                              <div class="card mt-4 card1 ">
+                                <div class=" row row1 mt-4">
+                                  <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)"
+                                    *ngIf="showOtpComponent" class="otpinput" [config]="config"></ng-otp-input>
+                                </div>
+                              </div>
+                              <div class="">
+                                <h5 class="resendotp mt-4"><strong>Resend OTP</strong> </h5>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="redeembtn">
+                            <br><button class="otpbtn btn rounded-pill mt-2" type="submit" (click)="myFunction()" style="width: auto;
+                      background-color: white;">Verify</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div *ngIf='editForm'>
+                    <h4 class="enterotp mt-2 text-white"><strong>Reset Your Password</strong></h4>
+                    <mat-card class="resendotp" style=" margin: auto;">
+                      <form [formGroup]="signupForm2" (ngSubmit)="submit()">
+                        <div class="form-group">
+                          <mat-icon class="pwicon2" matSuffix (click)="hide3 = !hide3" style='cursor: pointer;'
+                            style=" top: 5px;  position:absolute;  color: black;">
+                            {{hide3 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          <input name="Password" formControlName="Password" type="password" placeholder="Enter Password"
+                            autofocus="autofocus" class="input pass input1" [type]="hide3 ? 'password' : 'text'"
+                            class="form-control inputsize">
+                          <div *ngIf="g.Password.touched && g.Password.invalid" class="alert alert-danger">
+                            <div *ngIf="g.Password.errors.required">Password is required.</div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <mat-icon class="pwicon2" matSuffix (click)="hide4 = !hide4" style='cursor: pointer;'
+                            style=" top: 5px;  position:absolute;  color: black;">
+                            {{hide4 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                          <input name="ConfirmPassword" formControlName="ConfirmPassword" type="password"
+                            placeholder=" Enter Confirm Password" autofocus="autofocus" class="input pass input1"
+                            [type]="hide4 ? 'password' : 'text'" class="form-control inputsize"
+                            [ngClass]="{ 'is-invalid': submitted && g.confirmPassword.errors }" />
+                          <div *ngIf="g.ConfirmPassword.touched && g.ConfirmPassword.invalid"
+                            class="alert alert-danger">
+                            <div *ngIf="g.ConfirmPassword.errors.required">ConfirmPassword is required.</div>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn rounded-pill text-dark bg-white mt-4"
+                          style="width:7pc;text-transform: capitalize;">Confirm</button>
+
+                      </form>
+                    </mat-card>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

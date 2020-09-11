@@ -1,0 +1,202 @@
+<div class="main-content">
+  <div class="container-fluid bg-color">
+    <p class="text-dark "> Uploaded On 03/31/2020 @ 2:30Pm</p>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <a href="/#videos">
+        <div class="card card-stats">
+          <video loop controls class="mainvideo">
+            <source src={{video}} type="video/mp4" />
+          </video>
+        </div>
+      </a>
+    </div>
+    <p class="text-dark ">Watch Next</p>
+    <div class="container-fluid" [class.showvideo]="showvideo">
+      <div class="row mt-2">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#videos">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#videos">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#videos">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#videos">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+      </div>
+      <ng-container *ngIf="showMore1">
+        <div class="row mt-2">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#videos">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#videos">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#videos">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#videos">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row mt-2">
+      <div class="col-lg-12 col-md-12 text-center">
+        <button class="more btn rounded-pill text-white "
+          (click)="showMore1= !showMore1">{{showMore1 ?'less':'More' }}</button>
+      </div>
+    </div>
+    <p class="text-dark "> Uploaded On 03/31/2020 @ 2:30Pm</p>
+    <div class="col-lg-12 col-md-12 col-sm-12">
+      <div class="mainimg card card-stats">
+        <div #rr *ngIf="samesizeoption" class="fullWidth">
+          <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+            [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" [class.showimage]="showimage">
+      <div class="row mt-2">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#image">
+            <div class="card card-stats">
+              <div #rr *ngIf="samesizeoption" class="fullWidth">
+                <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                  [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#image">
+            <div class="card card-stats">
+              <div #rr *ngIf="samesizeoption" class="fullWidth">
+                <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                  [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#image">
+            <div class="card card-stats">
+              <div #rr *ngIf="samesizeoption" class="fullWidth">
+                <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                  [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#image">
+            <div class="card card-stats">
+              <div #rr *ngIf="samesizeoption" class="fullWidth">
+                <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                  [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <ng-container *ngIf="showMore2">
+        <div class="row mt-2">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#image">
+              <div class="card card-stats">
+                <div #rr *ngIf="samesizeoption" class="fullWidth">
+                  <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                    [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#image">
+              <div class="card card-stats">
+                <div #rr *ngIf="samesizeoption" class="fullWidth">
+                  <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                    [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#image">
+              <div class="card card-stats">
+                <div #rr *ngIf="samesizeoption" class="fullWidth">
+                  <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                    [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#image">
+              <div class="card card-stats">
+                <div #rr *ngIf="samesizeoption" class="fullWidth">
+                  <ngx-image-display [sameSize]="samesizeConfig" [imageEffect]="hovereffect" [images]="images"
+                    [displayconfig]="displayconfig" (onImageSelected)="logImage($event)"></ngx-image-display>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row mt-2">
+      <div class="col-lg-12 col-md-12 text-center">
+        <button class="more btn rounded-pill text-white "
+          (click)="showMore2= !showMore2">{{showMore2 ?'less':'More' }}</button>
+      </div>
+    </div>

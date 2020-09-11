@@ -1,0 +1,245 @@
+<div class="main-content">
+  <div class="container-fluid bg-white">
+    <p class="couponshistory text-dark ">Coupon's History</p>
+    <div class="row mt-2">
+      <div class="col-lg-6 col-md-12 card card-stats p-2">
+        <div class="card-content">
+          <chart [type]="type" [data]="data" [options]="options"></chart>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6" style="top: 43px;">
+        <a href="/#user-coupons">
+          <div class="card card-stats p-2">
+            <div class="card-header ">
+              Total Coupons
+            </div>
+            <div class="card-content">
+              <div class="progress blue">
+                <span class="progress-left">
+                  <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                  <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">{{outof}}</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6" style="top: 43px;">
+        <a href="/#history">
+          <div class="card card-stats p-2">
+            <div class="card-header ">
+              Today's
+            </div>
+            <div class="progress yellow">
+              <span class="progress-left">
+                <span class="progress-bar"></span>
+              </span>
+              <span class="progress-right">
+                <span class="progress-bar"></span>
+              </span>
+              <div class="progress-value">{{outof1}}</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row mt-2">
+      <div class="col-lg-12 col-md-12 text-center text-dark">
+        Upload Media
+        <br>
+        <div *ngIf='show'>
+          <div class="add card card-stats">
+            <form (ngSubmit)="submitForm(uploadForm)" [formGroup]="uploadForm">
+              <div class="form-group">
+                <label class="text-dark">Title</label>
+                <input type="text" formControlName="Title" class="form-control" placeholder="My First Video/Images">
+              </div>
+              <div class="form-group">
+                <label class="text-dark">Description</label>
+                <textarea type="text" rows="5" formControlName="Description" class="form-control"
+                  placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos amet culpa possimus sapiente optio quidem facere quibusdam atque beatae, harum praesentium. Corporis quia vel repellat, quibusdam atque nesciunt nisi mollitia.">
+                </textarea>
+              </div>
+              <div class="form-group">
+                <button class="add1" style="background-color: white; ">
+                  <mat-icon class="edit" (click)="filePicker.click()" style="width: 46px; font-size: 50px;">add
+                  </mat-icon>
+                </button>
+                <div style="position: absolute; visibility: hidden;">
+                  <input type="file" formControlName="file" (change)="fileChange($event)" #filePicker
+                    accept=".png, .jpg, .jpeg" #fileInput (change)="uploadFile($event)">
+                  <img [src]="url" *ngIf="format==='image' && url" height="200"> <br />
+                  <video [src]="url" *ngIf="format==='video' && url" height="200" controls></video> <br />
+                </div><br>
+                <p>select video</p>
+              </div>
+              <button class="btn rounded-pill text-white " (click)='show2()' type="submit">Upload Your Media
+                Here</button>
+            </form>
+          </div>
+        </div>
+        <button class="btn rounded-pill text-white " (click)='show1()' *ngIf=showcontent>Upload Your Media Here</button>
+      </div>
+    </div>
+    <p class="text-dark ">Video's Uploaded</p>
+    <div class="container-fluid" [class.showvideo]="showvideo">
+      <div class="row mt-2">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <video loop controls>
+                <source src={{video}} type="video/mp4" />
+              </video>
+            </div>
+          </a>
+        </div>
+      </div>
+      <ng-container *ngIf="showMore1">
+        <div class="row mt-2">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <video loop controls>
+                  <source src={{video}} type="video/mp4" />
+                </video>
+              </div>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row mt-2">
+      <div class="col-lg-12 col-md-12 text-center">
+        <button class="more btn rounded-pill text-white "
+          (click)="showMore1= !showMore1">{{showMore1 ?'less':'More' }}</button>
+      </div>
+    </div>
+    <p class="text-dark ">Image's Uploaded</p>
+    <div class="container-fluid" [class.showimage]="showimage">
+      <div class="row mt-2">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <img src="{{image}}" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <img src="{{image}}" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <img src="{{image}}" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <a href="/#media">
+            <div class="card card-stats">
+              <img src="{{image}}" alt="">
+            </div>
+          </a>
+        </div>
+      </div>
+      <ng-container *ngIf="showMore2">
+        <div class="row mt-2">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <img src="{{image}}" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <img src="{{image}}" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <img src="{{image}}" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <a href="/#media">
+              <div class="card card-stats">
+                <img src="{{image}}" alt="">
+              </div>
+            </a>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row mt-2">
+      <div class="col-lg-12 col-md-12 text-center">
+        <button class="more btn rounded-pill text-white "
+          (click)="showMore2= !showMore2">{{showMore2 ?'less':'More' }}</button>
+      </div>
+    </div>
+  </div>

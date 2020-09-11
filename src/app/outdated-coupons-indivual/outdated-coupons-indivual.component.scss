@@ -1,0 +1,32 @@
+p{
+    font-weight: bold;
+}
+.image{
+    background-color: rgba(90, 125, 139, 0.775);
+}
+.text{
+    background-color: rgba(147, 224, 255, 0.415);
+    li{
+        color: slategray;
+        font-size: small;
+    }
+    p{
+        color: rgb(59, 196, 250);
+        font-size: small;
+    }
+}
+.coupons{
+    background-color: rgba(147, 224, 255, 0.415);
+}
+button {
+    cursor: pointer;
+    background-color: #07706E;
+}
+.coupons1{
+    margin-left: 30px;
+
+}
+.container-fluid{
+    background-color: white;
+    margin-top: 71px;
+}

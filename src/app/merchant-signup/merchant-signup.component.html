@@ -1,0 +1,96 @@
+<div class="container col-md-12 p-0 m-0">
+  <img src="../../assets/img/channelbackground.png" alt="" class=" p-0 m-0 imgg">
+  <div class="content text-center ">
+    <nav class="navbar fixed-top">
+      <a class="navbar-brand" href="#">
+        <img src="../../assets/img/pickbids logo.png" class="navimg" alt="">
+      </a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" style="color: white;font-size: 1.2rem;margin-right: 3pc;">
+          <span><i class="fa fa-user-o fa-1" aria-hidden="true"></i></span>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <div id="logbox">
+        <form id="signup" [formGroup]="signupForm" (ngSubmit)="submit()">
+          <a routerLink="/login">
+            <i class="fa fa-times" aria-hidden="true" style="margin-left: 701px;font-size: 1.5rem;"></i>
+          </a>
+          <h1 class="headh1" style="border-bottom: 2px solid red;width: 13%;margin-top: -38px;">Sign up</h1>
+          <div class="form-group">
+            <input name="name" formControlName="name" type="text" placeholder="first Name" autofocus="autofocus"
+              class="input pass" style="margin-top: 32px;" />
+            <div *ngIf="f.name.touched && f.name.invalid" class="alert alert-danger">
+              <div *ngIf="f.name.errors.required">First Name is required.</div>
+              <div *ngIf="f.name.errors.pattern">First Name Should be written in Character</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="lastname" formControlName="lastname" type="text" placeholder="Last Name" autofocus="autofocus"
+              class="input pass input1" />
+            <div *ngIf="f.lastname.touched && f.lastname.invalid" class="alert alert-danger">
+              <div *ngIf="f.lastname.errors.required">Last Name is required.</div>
+              <div *ngIf="f.lastname.errors.pattern">Last Name Should be written in Character</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="Email" formControlName="email" type="email" placeholder="Email" class="input pass input1" />
+            <div *ngIf="f.email.touched && f.email.invalid" class="alert alert-danger">
+              <div *ngIf="f.email.errors.required">Email is required.</div>
+              <div *ngIf="f.email.errors.email">Valid Email is required.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="contact" formControlName="contact" type="tel" placeholder="Phone Number"
+              class="input pass input1" />
+            <div *ngIf="f.contact.touched && f.contact.invalid" class="alert alert-danger">
+              <div *ngIf="f.contact.errors.required">Mobile Number is required.</div>
+              <div *ngIf="f.contact.errors.pattern">Please, Enter 10 digit Mobile Number.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="StoreCatagory" formControlName="StoreCatagory" type="text" placeholder="Store Catagory"
+              class="input pass input1" />
+            <div *ngIf="f.StoreCatagory.touched && f.StoreCatagory.invalid" class="alert alert-danger">
+              <div *ngIf="f.StoreCatagory.errors.required">Store Catagory is required.</div>
+              <div *ngIf="f.StoreCatagory.errors.pattern">Store Catagory Should be written in Character</div>
+              <div *ngIf="f.StoreCatagory.errors.minlength">Store Catagory Should be Minimum 4 Character</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="StoreName" formControlName="StoreName" type="text" placeholder="Store Name"
+              class="input pass input1" />
+            <div *ngIf="f.StoreName.touched && f.StoreName.invalid" class="alert alert-danger">
+              <div *ngIf="f.StoreName.errors.required">Store Name is required.</div>
+              <div *ngIf="f.StoreName.errors.pattern">Store Name Should be written in Character</div>
+              <div *ngIf="f.StoreName.errors.minlength">Store Name Should be Minimum 4 Character</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input name="GSTNO" type="text" formControlName="GSTNO" placeholder="GST No." class="input pass input1" />
+            <div *ngIf="f.GSTNO.touched && f.GSTNO.invalid" class="alert alert-danger">
+              <div *ngIf="f.GSTNO.errors.required">GST Number is required.</div>
+              <div *ngIf="f.GSTNO.errors.pattern">Please, Enter 15 digit GST Number.<br>
+                EX:-22AAAAA0000A1Z5
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="checkbox">
+              <label style="margin-left: -20%;">
+                <input type="checkbox" name="check" formControlName="check">
+                I agree to the Lorem ipsum dolor sit, amet consectetur adipisicing
+              </label>
+              <div *ngIf="f.check.touched && f.check.invalid" class="alert alert-danger">
+                <div *ngIf="f.check.errors.required">Please Tick The CheckBox For Proceed To Next Page</div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn rounded-pill bg-white text-dark" style="width: 20%;height: 39px;"
+            (click)="next(user)">Next</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

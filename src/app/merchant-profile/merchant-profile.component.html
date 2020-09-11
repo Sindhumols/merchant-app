@@ -1,0 +1,70 @@
+<div class="col-md-12 p-0 m-0">
+  <div class="container col-md-12 p-0 m-0">
+    <img class="bgimg" src="../../assets/img/bgimg.png" class="w-100 p-0 m-0 " style="height: 50pc;">
+    <div class="content text-center mt-2  w-100 content1">
+      <div class="main-content">
+        <div class="container-fluid">
+          <app-header-profile-notification></app-header-profile-notification>
+          <div class="form">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 " style="margin: auto;  background: linear-gradient(90deg, #0dafbc,rgb(35, 158, 180), rgb(53, 141, 147),rgb(13, 171, 180));
+                        height: 100%;">
+                <div class="row ">
+                  <div class="col-lg-4 col-12 p-2">
+                    <mat-card class="h-75">
+                      <img [src]="_d.bypassSecurityTrustUrl(imgsrc)" class="profileimg " class="img-fluid">
+                      
+                      <mat-icon class="edit" (click)="filePicker.click()" 
+                        style="background-color:#F17808; color: white; ">edit</mat-icon>
+                      <div style="position: absolute; visibility: hidden;">
+                        <input type="file" (change)="fileChange($event)" #filePicker>
+                      </div><br>
+                      <!-- <mat-card class="mx-auto mt-4 mb-4"> -->
+                      <div style="position: relative; cursor: pointer;">
+                        Store Name
+                      </div>
+                      <!-- </mat-card> -->
+                    </mat-card>
+                    <br>
+                    <mat-card class="p-0" >
+                      <a routerLink="/editprofile"><button class="btn   mt-2 text-dark" (click)="show1()"
+                          style="background-color: white;">Edit Profile</button></a>
+                    </mat-card>
+                  </div>
+                  <div class="col-lg-8 p-2">
+                    <p class='text-white'>Profile Information</p>
+                    <mat-card class="information" style=" margin: 5px; height: fit-content;">
+                      <form (ngSubmit)="informSubmit(form)" [formGroup]="form">
+                        <div class="form-group">
+                          <mat-card class="information" style=" margin: 5px;height: fit-content;">
+                            {{name}}
+                          </mat-card>
+                          <!-- <label class='text-dark' style="text-align: left;">Full Name</label>
+                          <input type="text" [(ngModel)]="fullmane" formControlName="fullmane" placeholder="My Name"
+                            class="form-control text-dark"> -->
+                        </div>
+                        <div class="form-group">
+                          <mat-card class="information" style=" margin: 5px; height: fit-content;">
+                            <!-- <label class='text-dark'>Where do you Live</label>
+                          <input type="text" [(ngModel)]="live" formControlName="live" placeholder="Bangalore"
+                            class="form-control text-dark"> -->
+                            {{place}}
+                          </mat-card>
+                        </div>
+                        <!-- <button type="submit" class="btn " [disabled]="!form.valid"
+                          style="background-color:#F17808; color: white;"> Save </button> -->
+                      </form>
+                    </mat-card>
+                    <div>
+                    </div>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,132 @@
+.cpoy-right-bg{
+    background-color:rgb(49, 20, 20);
+    }
+    .footerimg{
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: -31px;
+    }
+    p{
+    color: white;
+    }
+    @media(min-width:1024px){
+    .cpoy-right-bg{
+    width: 100%;
+    }
+    .footerimg {
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: -31px;
+    }
+    }
+    
+    @media(min-width:1024px){
+        .cpoy-right-bg{
+            width: 100%;
+            }
+            .footerimg{
+            height: 10%;
+            width: 116px;
+            margin-top: -74px;
+            margin-left: -31px;
+            }
+    }
+    /*-------------tablet/Ipad----------------------*/
+    @media(min-width:769px) and (max-width:1023px){
+    .cpoy-right-bg{
+    width: 100%;
+    }
+    .footerimg{
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: -31px;
+    }
+    }
+    
+    /*--------------mobile----------------------*/
+    @media(max-width:768px){
+    .cpoy-right-bg{
+    width: 149%;
+    margin-top: -8px;
+    }
+    .footerimg{
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: 347px;
+    }
+    }   
+    @media(max-width:468px){
+    .cpoy-right-bg{
+    width: 290%;
+    }
+    .footerimg{
+    height: 10%;
+    width: 136px;
+    margin-top: -74px;
+    margin-left: 547%;
+    }
+    }
+    @media(max-width:425px){
+    .cpoy-right-bg{
+    width: 290%;
+    }
+    .footerimg{
+    height: 10%;
+    width: 136px;
+    margin-top: -74px;
+    margin-left: 547%;
+    }
+    }
+    @media(max-width:411px){
+    .cpoy-right-bg{
+    width: 308%;
+    margin-top: -3%;
+    }
+    .footerimg {
+    height: 10%;
+    width: 136px;
+    margin-top: -74px;
+    margin-left: 520%;
+    }
+    }
+    @media(max-width:375px){
+    .cpoy-right-bg{
+    width: 305%;
+    margin-top: -3%;
+    }
+    .footerimg {
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: 624%;
+    }
+    }
+    @media(max-width:360px){
+    .cpoy-right-bg{
+    width:310%;
+    margin-top: -2%;
+    
+    }
+    .footerimg {
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: 624%;
+    }
+    }
+    @media(max-width:320px){
+    .cpoy-right-bg{
+    width:297%;
+    margin-top: 0%;
+    }
+    .footerimg {
+    height: 10%;
+    width: 116px;
+    margin-top: -74px;
+    margin-left: 479%;
+    }
+    }

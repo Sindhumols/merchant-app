@@ -1,0 +1,137 @@
+.headimg{
+    height: 100%;
+    width: 118px;
+    }
+    .navbar{
+    box-shadow: none;
+    margin-bottom: 0px;
+    }
+    .button1 {
+    cursor: pointer;
+    padding: 10px 60px;
+    border: 1px solid white;
+    text-align: center;
+    font-weight: bolder;
+    color: white;
+    width: max-content;
+    }
+    //login//
+.fa-1 {
+    font-size: 1.5em;
+    }
+    .user {
+    font-size: 1.5em;
+    }
+    p {
+    font-family: Lato;
+    }
+    .example-card {
+    max-width: 100px;
+    margin: 4px
+    }
+    .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+    }
+    .mat-card-title{
+    font-size: 6px;
+    }
+    .example-card1{
+    width: 225px;
+    height: 70px;
+    margin: -1rem !important;
+    }
+    .navbar-dark .navbar-toggler {
+    border-color: white;
+    background-color: white;
+    width: 50px;
+    }
+    .navbar-toggler .navbar-toggler-icon {
+    width: auto;
+    color: black;
+    margin-top: 7px;
+    }
+    @media (max-width: 991px){
+    .navbar-nav .nav-item .nav-link {
+    padding: 0;
+    }
+    }
+    .mat-menu-content:not(:empty) {
+    padding-top: 35px;
+    padding-bottom: 8px;
+    }
+    div span.only-show-on-hover {
+    visibility: hidden;
+    }
+    div:hover span.only-show-on-hover {
+    visibility: visible;
+    }
+    .border-white{
+    border: 2px solid white;
+    background: linear-gradient(red , rgb(185, 1, 78));
+    }
+    .rounded-pill{
+    width: 70%;
+    height: 25%;
+    }
+    .fa-facebook-square:before {
+    content: "";
+    font-size: 3.5rem !important;
+    }
+    .fa-google-plus-square:before {
+    content: "";
+    font-size: 3.5rem !important;
+    }
+    .mat-card-title {
+    font-size: 10px;
+    }
+    @media(min-width:1024px){
+    .navbar{
+    width: 100%;
+    }
+    }
+    @media(max-width:1024px){
+    .navbar{
+    width: 100%;
+    }
+    }
+    @media(min-width:768px) and (max-width:1023px){
+    .navbar{
+    width: 100%;
+    }
+    }
+    @media(max-width:768px){
+    .navbar{
+    width: 149%;
+    }
+    }
+    @media(max-width:468px){
+    .navbar{
+    width: 290%;
+    }
+    }
+    @media(max-width:425px){
+    .navbar{
+    width: 290%;
+    }
+    }
+    @media(max-width:411px){
+    .navbar{
+    width: 301%;
+    }
+    }
+    @media(max-width:375px){
+    .navbar{
+    width: 297%;
+    }
+    }
+    @media(max-width:360px){
+    .navbar{
+    width: 297%;
+    }
+    }
+    @media(max-width:320px){
+    .navbar{
+    width: 297%;
+    }
+    }

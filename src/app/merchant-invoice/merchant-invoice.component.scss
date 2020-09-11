@@ -1,0 +1,117 @@
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction:row; 
+    }
+    .container img {vertical-align: middle;
+    height: fit-content;}
+    .container .content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(7, 105, 112, 0.877);  
+    color: #f1f1f1;
+    font-weight: bolder;
+    }
+    .strong1{
+    font-weight: 14px;
+    }
+    .content1{
+    height: fit-content;
+    }
+    .btn-rounded{
+    border-radius: 2.2rem;
+    font-size: 7px;
+    }
+    .right{
+    top: -1061px;
+    }
+    .invoice{font-weight: 1000;
+    }
+    tr{
+    border:1px solid gray;
+    }
+    td{
+    border:1px solid gray;
+    }
+    .btn{
+    text-transform: capitalize;
+    height: fit-content;
+    }
+    .generateotp{
+    background-color: white;
+    color: rgb(59, 196, 250);;
+    }
+    /*-----------laptop/Desktop-----------------------*/
+    @media(min-width:1024px){
+    .col-md-8{
+    float: right;
+    top: -985px;
+    width: 62%;
+    right: 3%;
+    }
+    }
+    @media(max-width:1024px){
+    .col-md-8{
+    float: right;
+    top: -1369px;
+    }
+    .btn{
+    border-radius: 2.2rem;
+    font-size: 7px;
+    left: -7px;
+    width: 76px;
+    }
+    }
+    /*-------------tablet/Ipad----------------------*/
+    @media(min-width:769px) and (max-width:1023px){
+    .col-md-8{
+    float: right;
+    top: -1369px;
+    }
+    }
+    /*--------------mobile----------------------*/
+    @media(max-width:768px){
+    .col-md-8{
+    float: right;
+    top: -1363px;
+    right: 3%;
+    width: 63%;
+    }
+    .btn{
+        border-radius: 2.2rem;
+        font-size: 7px;
+        left: -7px;
+        width: 76px;
+        }
+    }
+    @media(max-width:468px){
+    .col-md-8{
+    float: right;
+    top: -25px;
+    width: 91%;
+    right: 5%;
+    }
+    }
+    @media(max-width:425px){
+    .col-md-8{
+    float: right;
+    top: -25px;
+    width: 91%;
+    right: 5%;
+    }
+    }
+    @media(max-width:360px){
+    .col-md-8{
+    float: right;
+    top: -25px;
+    }
+    }
+    @media(max-width:320px){
+    .col-md-8{
+    float: right;
+    top: -25px;
+    }
+    }

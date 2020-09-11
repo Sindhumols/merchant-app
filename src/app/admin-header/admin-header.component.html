@@ -1,0 +1,135 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color:#07706E !important;">
+  <a class="navbar-brand" href="#"><img src="../../assets/img/pickbids_logo.png" class="navimg" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" (click)="alert()">
+    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item  " routerLinkActive="active" style="color: white; "
+        (mouseover)="dispatchPlanmenuTrigger.openMenu()">
+        <a class="nav-link" #dispatchPlanmenuTrigger="matMenuTrigger" [matMenuTriggerFor]="dispatchPlan">
+          <mat-icon class="font-size: 30px;">notifications_none</mat-icon><span class="sr-only">(current)</span>
+        </a>
+        <mat-menu #dispatchPlan="matMenu" class="mt-2">
+          <div [class.show]="show">
+            <button mat-menu-item routerLink='/history'>
+              <mat-card class="example-card1">
+                <mat-card-header>
+                  <div style="float: right;">
+                    <button mat-flat-button>view</button>
+                  </div>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>The Sephora added new offers</mat-card-title>
+                </mat-card-header>
+              </mat-card>
+            </button>
+            <button mat-menu-item routerLink='/history'>
+              <mat-card class="example-card1">
+                <mat-card-header>
+                  <div style="float: right;">
+                    <button mat-flat-button>view</button>
+                  </div>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>The Sephora added new offers</mat-card-title>
+                </mat-card-header>
+              </mat-card>
+            </button>
+            <button mat-menu-item routerLink='/history'>
+              <mat-card class="example-card1">
+                <mat-card-header>
+                  <div style="float: right;">
+                    <button mat-flat-button>view</button>
+                  </div>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>The Sephora added new offers</mat-card-title>
+                </mat-card-header>
+              </mat-card>
+            </button>
+            <ng-container *ngIf="showMore1" (mouseover)="dispatchPlanmenuTrigger.openMenu()">
+              <button mat-menu-item routerLink='/history'>
+                <mat-card class="example-card1">
+                  <mat-card-header>
+                    <div style="float: right;">
+                      <button mat-flat-button>view</button>
+                    </div>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>The Sephora added new offers</mat-card-title>
+                  </mat-card-header>
+                </mat-card>
+              </button>
+              <button mat-menu-item routerLink='/history'>
+                <mat-card class="example-card1">
+                  <mat-card-header>
+                    <div style="float: right;">
+                      <button mat-flat-button>view</button>
+                    </div>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>The Sephora added new offers</mat-card-title>
+                  </mat-card-header>
+                </mat-card>
+              </button>
+              <button mat-menu-item routerLink='/history'>
+                <mat-card class="example-card1">
+                  <mat-card-header>
+                    <div style="float: right;">
+                      <button mat-flat-button>view</button>
+                    </div>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>The Sephora added new offers</mat-card-title>
+                  </mat-card-header>
+                </mat-card>
+              </button>
+              <button mat-menu-item routerLink='/history'>
+                <mat-card class="example-card1">
+                  <mat-card-header>
+                    <div style="float: right;">
+                      <button mat-flat-button>view</button>
+                    </div>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>The Sephora added new offers</mat-card-title>
+                  </mat-card-header>
+                </mat-card>
+              </button>
+              <button mat-menu-item routerLink='/history'>
+                <mat-card class="example-card1">
+                  <mat-card-header>
+                    <div style="float: right;">
+                      <button mat-flat-button>view</button>
+                    </div>
+
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>The Sephora added new offers</mat-card-title>
+                  </mat-card-header>
+                </mat-card>
+              </button>
+            </ng-container>
+          </div>
+          <button mat-menu-item (click)="showMore1= !showMore1">Show {{showMore1 ?'less':'More' }}</button>
+        </mat-menu>
+      </li>
+      <li class="nav-item" style="color: white;" (mouseover)="createPlanmenuTrigger.openMenu()"
+        (mouseout)="$event.stopPropagation();createPlanmenuTrigger.openMenu()">
+        <a class="nav-link" #createPlanmenuTrigger="matMenuTrigger" [matMenuTriggerFor]="createPlan">
+          <mat-icon>person_outline</mat-icon>
+        </a>
+        <mat-menu #createPlan="matMenu" class='mt-2'>
+          <button mat-menu-item routerLink='/recoverypassword'>Recover Password</button>
+          <button mat-menu-item routerLink='/profile'>My Account</button>
+          <button mat-menu-item routerLink='/login'>Signout</button>
+        </mat-menu>
+      </li>
+      <li class="nav-item" style="color: white;" (mouseover)="createPlanmenuTrigger.openMenu()"
+        (mouseout)="$event.stopPropagation();createPlanmenuTrigger.openMenu()">
+        <a class="nav-link profile" #createPlanmenuTrigger="matMenuTrigger" [matMenuTriggerFor]="createPlan">Profile</a>
+        <mat-menu #createPlan="matMenu" class='mt-2'>
+          <button mat-menu-item routerLink='/recoverypassword'>Recover Password</button>
+          <button mat-menu-item routerLink='/profile'>My Account</button>
+          <button mat-menu-item routerLink='/login'>Signout</button>
+        </mat-menu>
+      </li>
+    </ul>
+  </div>
+</nav>

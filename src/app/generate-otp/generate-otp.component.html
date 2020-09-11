@@ -1,0 +1,88 @@
+<div class="col-md-12 p-0 m-0">
+  <div class="container col-md-12 p-0 m-0">
+    <img class="bgimg" src="../../assets/img/bgimg.png" class="w-100 p-0 m-0 imgg" style="height: fit-content;">
+    <div class="content text-center mt-2  w-100 content1">
+      <div class="main-content">
+        <div class="container-fluid">
+          <div class=" coupons1 row">
+            <div class="col-xs-3 col-sm-3 image text-center pl-2  bg-white">
+              <img class="img1" src="{{hotels}}" alt="">
+            </div>
+            <div class="col-xs-3 col-sm-3 text-center rounded-right text bg-white">
+              <h4 class="bar">Bars, Restaurants & Pubs</h4>
+              <h3><strong>{{ hotelname}}</strong></h3>
+              <h4>Time:<p>{{ time}}</p>
+              </h4>
+              <h4>Cost For Two - 1,360 INR</h4>
+              <h6> American,Asian,Mexican, North Indian</h6>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <a routerLink="/user-coupons">
+                <div class="card card-stats p-2">
+                  <div class="card-header ">
+                    Total Coupons
+                  </div>
+                  <div class="card-content">
+                    <div class="progress blue">
+                      <span class="progress-left">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">{{outof}}</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <a href="">
+                <div class="card card-stats p-2">
+                  <div class="card-header ">
+                    Today's
+                  </div>
+                  <div class="progress yellow">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">{{outof1}}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 p-0  h-100" style="margin: 0px auto;">
+        <div class=" container col-md-12 p-0  con">
+          <div class="main-content mt-4 p-3 ">
+            <div class="col-md-8 m-auto text-left rounded shadow bg-white">
+              <p class="enterotp mt-2"><strong> Enter OTP</strong></p>
+              <div class="otp mt-4 ">
+                <div class="card mt-4 card1 ">
+                  <div class=" row row1 mt-4">
+                    <ng-otp-input #ngOtpInput (onInputChange)="onOtpChange($event)" *ngIf="showOtpComponent"
+                      [config]="config"></ng-otp-input>
+                  </div>
+                </div>
+                <div class="">
+                  <h5 class="resendotp mt-4"><strong>Resend OTP</strong> </h5>
+                </div>
+                <a routerLink="/invoice">
+                  <div class="redeembtn">
+                    <br><button class="otpbtn btn rounded-pill mt-2" type="button"
+                      onclick="myFunction()">Redeem</button>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="col-md-12 p-0 m-0">
+  <div class="container col-md-12 p-0 m-0">
+    <img class="bgimg" src="../../assets/img/bgimg.png" class="w-100 p-0 m-0 " style="height: fit-content;">
+    <div class="content text-center mt-2  w-100 content1">
+      <div class="main-content">
+        <div class="container-fluid">
+          <app-header-profile-notification></app-header-profile-notification>
+          <h1 class="paymentmethod text-white"> Payment </h1>
+          <img src="../../assets/img/razorpay.png" alt="" style="margin-top: 3%;">
+          <h5 class="paymentmethod2 " style="margin-top:1%;"><strong> 599 INR will be charged for 6 months premium
+              offers </strong></h5>
+          <mat-card class="razorpay2 text-white" layout="row" layout-align="center center">
+            <h4 class="paymentmethod3 text-dark"><strong> Name :</strong></h4>
+            <h5 class="paymentmethod3 text-dark"><strong>Number :</strong> </h5>
+            <h5 class="paymentmethod3 text-dark"><strong> Date : </strong></h5>
+            <h5 class="paymentmethod3 text-dark"><strong> Total :</strong> </h5>
+            <mat-divider style="color: black;"></mat-divider>
+            <h1 class="paymentmethod2 "><strong> 599 INR</strong></h1>
+          </mat-card>
+          <a routerLink="/subscription"><button type="submit" mat-flat-button
+              class="back m-0 mb-2  text-white w-90 rounded-pill px-5 h-40 mt-5 ">Back</button></a>
+          <a routerLink="/paid">
+            <button type="submit" mat-flat-button
+              class="paynow text-dark m-0 mb-2 w-90 rounded-pill px-5 h-40 mt-5 ">Paynow</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

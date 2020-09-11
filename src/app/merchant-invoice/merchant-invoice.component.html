@@ -1,0 +1,151 @@
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 m-0 d-flex flex-row" id="invoice">
+  <div class="container col-md-12 col-lg-12 col-sm-12 col-xs-12 p-0 m-0">
+    <img src="../../assets/img/main.png" alt="" class="w-100 p-0 m-0">
+    <div class="content text-center w-100 content1">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 m-0 flex-row" id="invoice">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 w-100" style="margin-top: 89px;">
+          <div class="card text-center card1">
+            <div class="card-header text-left" style="border-bottom: 1px solid gray;">
+              <strong>Order Summary</strong>
+            </div>
+            <div class="card-body" style="display: flex;">
+              <img src="../../assets/img/hotel.png" class="card-title mr-auto w-50" style="height: 94px;">
+              <p class="card-text w-50"><strong class="strong1">Arrive Bientot</strong>
+                Kormangala 5th block, <br>
+                Kormangala
+            </div>
+            <div class="card-footer text-left" style="border-top: 1px solid gray;">
+              <strong class="strong1"> 2 Cocktails + 1 Starter </strong> * <s>1750 INR</s>
+              <strong class="strong1">875 INR</strong>
+            </div>
+          </div>
+          <p>Other Who Redeemed the Offer</p>
+          <div class="card text-center card1 col-sm-12 col-xs-12" [class.show]="show">
+            <div class="card-body w-100 col-sm-12 col-xs-12" style="display: flex;">
+              <img src="../../assets/img/profilesmall.png" class=" rounded card-title mr-auto w-25 h-25">
+              <p class="card-text w-50"><strong class="strong1">Robert Chahan</strong>
+                <br>9972085956
+                <br>robertchahan@gmail.com
+                <br><a routerLink="">
+                  <span style="color:orange">Applied a Coupon Of 50% Off</span></a>
+              </p>
+              <a routerLink="/generateotp">
+                <button type="button" class="btn btn-outline-warning btn-rounded btn-sm waves-effect ">Generate
+                  OTP</button>
+              </a>
+            </div>
+          </div>
+          <div class="card text-center card1 col-sm-12 col-xs-12">
+            <div class="card-body w-100 col-sm-12 col-xs-12" style="display: flex;">
+              <img src="../../assets/img/profilesmall.png" class=" rounded card-title mr-auto w-25 h-25">
+              <p class="card-text w-50"><strong class="strong1">Robert Chahan</strong>
+                <br>9972085956
+                <br>robertchahan@gmail.com
+                <br><a routerLink="">
+                  <span style="color:orange">Applied a Coupon Of 50% Off</span></a>
+              </p>
+              <a routerLink="/generateotp">
+                <button type="button" class="btn btn-outline-warning btn-rounded btn-sm waves-effect ">Generate
+                  OTP</button>
+              </a>
+            </div>
+          </div>
+          <div class="card text-center card1 col-sm-12 col-xs-12">
+            <div class="card-body w-100 col-sm-12 col-xs-12" style="display: flex;">
+              <img src="../../assets/img/profilesmall.png" class=" rounded card-title mr-auto w-25 h-25">
+              <p class="card-text w-50"><strong class="strong1">Robert Chahan</strong>
+                <br>9972085956
+                <br>robertchahan@gmail.com
+                <br><a routerLink="">
+                  <span style="color:orange">Applied a Coupon Of 50% Off</span></a>
+              </p>
+              <a routerLink="/generateotp">
+                <button type="button" class="btn btn-outline-warning btn-rounded btn-sm waves-effect ">Generate
+                  OTP</button>
+              </a>
+            </div>
+          </div>
+          <div class="card text-center card1 col-sm-12 col-xs-12" *ngIf="showMore1">
+            <div class="card-body w-100 col-sm-12 col-xs-12" style="display: flex;">
+              <img src="../../assets/img/profilesmall.png" class=" rounded card-title mr-auto w-25 h-25">
+              <p class="card-text w-50"><strong class="strong1">Robert Chahan</strong>
+                <br>9972085956
+                <br>robertchahan@gmail.com
+                <br><a routerLink="">
+                  <span style="color:orange">Applied a Coupon Of 50% Off</span></a>
+              </p>
+              <a routerLink="/generateotp">
+                <button type="button" class="btn btn-outline-warning btn-rounded btn-sm waves-effect ">Generate
+                  OTP</button>
+              </a>
+            </div>
+          </div>
+          <button type="button" class="btn rounded-pill text-white" (click)="showMore1= !showMore1"
+            style="background-color: rgba(42, 110, 131, 0.877); ">{{showMore1 ?'less':'More' }}</button>
+        </div>
+        <div class="col-md-8 col-sm-12 colxs-12 p-0 m-0 ">
+          <div class="card text-center">
+            <div class="card-header" style="border-bottom: 1px solid black;">
+              <img src="../../assets/img/hotel.png" class="card-title float-left mr-2 w-25 h-25">
+              <p class="float-right invoice">Invoice</p>
+              <p class="card-text text-left"><strong class="strong1">Robert Chahan</strong>
+                <br>9972085956
+                <br>robertchahan@gmail.com </p>
+            </div>
+            <div class="card-body" style="display: flex;">
+              <p class="card-text text-left w-25">Bill to</p>
+              <p class="card-text w-50 text-left">Robert Chahan
+                <br>9972085956
+                <br>robertchahan@gmail.com
+                <br>
+              </p>
+              <p class="float-right w-25">
+                Invoice Number:&nbsp; &nbsp;300201<br>
+                Date:&nbsp; &nbsp;12/12/2019
+              </p>
+            </div>
+            <div>
+              <table class="table" style="border:1px solid gray">
+                <thead>
+                  <tr>
+                    <th><strong>Items</strong></th>
+                    <th><strong>Price</strong></th>
+                    <th><strong>Offered Price</strong></th>
+                    <th><strong>Amount</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2 Cocktails + 1 Starter</td>
+                    <td>1299</td>
+                    <td>729 INR</td>
+                    <td>729 INR</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Total</td>
+                    <td>729 INR</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer text-muted m-auto">
+              <button type="button" class="btn btn-rounded" (click)="onPrint()"
+                style="background-color: rgba(42, 110, 131, 0.877); ">Print</button>
+              <a routerLink="/generateotp">
+                <button type="button" class="btn btn-rounded"
+                  style="background-color: rgba(42, 110, 131, 0.877); ">Done</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

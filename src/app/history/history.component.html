@@ -1,0 +1,148 @@
+<div class="col-md-12 p-0 m-0">
+  <div class="container col-md-12 p-0 m-0">
+    <img class="bgimg" src="../../assets/img/bgimg.png" class="w-100 p-0 m-0 imgg" style="height: fit-content;">
+    <div class="content text-center mt-2  w-100 content1">
+      <div class="main-content">
+        <div class="container-fluid">
+          <div class=" coupons1 row">
+            <div class="col-xs-3 col-sm-3 image text-center pl-2  bg-white">
+              <img class="img1" src="{{hotels}}" alt="">
+            </div>
+            <div class="col-xs-3 col-sm-3 text-center rounded-right text bg-white">
+              <h4 class="bar">Bars, Restaurants & Pubs</h4>
+              <h3><strong>{{ hotelname}}</strong></h3>
+              <h4>Time:<p>{{ time}}</p>
+              </h4>
+              <h4>Cost For Two - 1,360 INR</h4>
+              <h6> American,Asian,Mexican, North Indian</h6>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <a routerLink="/user-coupons">
+                <div class="card card-stats p-2">
+                  <div class="card-header ">
+                    Total Coupons
+                  </div>
+                  <div class="card-content">
+                    <div class="progress blue">
+                      <span class="progress-left">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <span class="progress-right">
+                        <span class="progress-bar"></span>
+                      </span>
+                      <div class="progress-value">{{outof}}</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <a href="">
+                <div class="card card-stats p-2">
+                  <div class="card-header ">
+                    Today's
+                  </div>
+                  <div class="progress yellow">
+                    <span class="progress-left">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <span class="progress-right">
+                      <span class="progress-bar"></span>
+                    </span>
+                    <div class="progress-value">{{outof1}}</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="show">
+        <h3 class="recentely text-white text-left"><strong>Recently Redeemed Offer</strong> </h3>
+        <div class="col-md-10 p-0 m-0 ">
+          <div class="details2 main-content2">
+            <div class="bg-white">
+              <div class="coupons1 row bg-white">
+                <div class="img2 col-lg-3 col-md-4 col-sm-4  image text-center pl-2">
+                  <img src="{{face}}" alt="">
+                </div>
+                <div class="details col-lg-4 col-md-4 col-sm-4 text-left  rounded-right text p-2">
+                  <h4 class="text-black">SingChan Koyel</h4>
+                  <h4 class="text-black"><strong>singchal12@gmail.com</strong></h4>
+                  <h4 class="text-black"><strong>9877887787</strong></h4>
+                  <p><strong>Applied a Coupon Of 50% Off</strong> </p>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-2">
+                  <button class="btn rounded-pill text-white redeem" type="submit">Redeemed</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10 p-0 m-0 ">
+          <div class="details2 main-content2">
+            <div class="bg-white">
+              <div class="coupons1 row bg-white">
+                <div class="img2 col-lg-3 col-md-4 col-sm-4  image text-center pl-2">
+                  <img src="{{face}}" alt="">
+                </div>
+                <div class="details col-lg-4 col-md-4 col-sm-4 text-left  rounded-right text p-2">
+                  <h4 class="text-black">SingChan Koyel</h4>
+                  <h4 class="text-black"><strong>singchal12@gmail.com</strong></h4>
+                  <h4 class="text-black"><strong>9877887787</strong></h4>
+                  <p><strong>Applied a Coupon Of 50% Off</strong> </p>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-2">
+                  <button class="btn rounded-pill text-white redeem" type="submit">Redeemed</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 class="recentely text-white text-left"><strong>People Who Redeemed Offer</strong> </h3>
+        <div class="col-md-10 p-0 m-0 ">
+          <div class="details2 main-content2">
+            <div class=" bg-white">
+              <div class="coupons1 row bg-white">
+                <div class="img2 col-lg-3 col-md-4 col-sm-4  image text-center pl-2">
+                  <img src="{{face}}" alt="">
+                </div>
+                <div class="details col-lg-4 col-md-4 col-sm-4 text-left  rounded-right text p-2">
+                  <h4 class="text-black">SingChan Koyel</h4>
+                  <h4 class="text-black"><strong>singchal12@gmail.com</strong></h4>
+                  <h4 class="text-black"><strong>9877887787</strong></h4>
+                  <p><strong>Applied a Coupon Of 50% Off</strong> </p>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-2">
+                  <a routerLink='/generateotp'> <button class="generateotp btn rounded-pill " (click)="generateotp()"
+                      type="submit">Generate OTP</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10 p-0 m-0 ">
+          <div class="details2 main-content2">
+            <div class=" bg-white">
+              <div class="coupons1 row bg-white">
+                <div class="img2 col-lg-3 col-md-4 col-sm-4  image text-center pl-2">
+                  <img src="{{face}}" alt="">
+                </div>
+                <div class="details col-lg-4 col-md-4 col-sm-4 text-left  rounded-right text p-2">
+                  <h4 class="text-black">SingChan Koyel</h4>
+                  <h4 class="text-black"><strong>singchal12@gmail.com</strong></h4>
+                  <h4 class="text-black"><strong>9877887787</strong></h4>
+                  <p><strong>Applied a Coupon Of 50% Off</strong> </p>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-2">
+                  <a routerLink='/generateotp'><button class="generateotp btn rounded-pill " type="submit">Generate
+                      OTP</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
